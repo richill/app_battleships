@@ -35,7 +35,6 @@ $(function() {
   // var ship1 = { locations: ["10", "20", "30"], hits: ["", "", ""] };
   // var ship2 = { locations: ["32", "33", "34"], hits: ["", "", ""] };
   // var ship3 = { locations: ["63", "64", "65"], hits: ["", "", ""] };
-
   var model = {
     boardSize: 7,
     numShips: 3,
@@ -83,19 +82,70 @@ $(function() {
     }
   };
 
+  function parseGuess(guess) {
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+    if (guess === null || guess.length !==2 ) {
+      alert("Please enter a letter and a number valid on the board.")
+    }
+    else {
+      firstChar = guess.charAt(0);
+      var row = alphabet.indexOf(firstChar);
+      var column = guess.charAt(1);
 
-model.fire("10");
-model.fire("20");
-model.fire("30");
+      if (isNaN(row) || isNaN(column)) {
+        alert("Ooops, that isn't on the board.");
+      }
+      else if (row < 0 || row >= model.boardSize || column < 0 || column >= model.boardSize) {
+        alert("Ooops, that's off the board.");
+      }
+      else {
+        return row + column;
+      }
+    }
+    return null;
+  }
 
-model.fire("32");
-model.fire("33");
-model.fire("34");
+  // var controller = {
+  //   guesses: 0,
 
-model.fire("63");
-model.fire("64");
-model.fire("65");
-model.fire("00");
+  //   processGuess: function(guess) {
+  //     var location = parseGuess(guess);
+  //     if (location) {
+  //       this.guesses++;
+  //       var hit = model.fire(location);
+  //       if (hit && model.shipsSunk === model.numShips) {
+  //           view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+  //       }
+  //     }
+  //   }
+  // };
+
+console.log(parseGuess("A0"));
+console.log(parseGuess("B6"));
+console.log(parseGuess("G3"));
+console.log(parseGuess("H0"));
+console.log(parseGuess("A7"));
+
+// controller.processGuess("A0");
+// controller.processGuess("C0");
+// controller.processGuess("D0");
+// controller.processGuess("D2");
+// controller.processGuess("D3");
+// controller.processGuess("D4");
+// controller.processGuess("G3");
+// controller.processGuess("G4");
+// controller.processGuess("G5");
+
+// model.fire("10");
+// model.fire("20");
+// model.fire("30");
+// model.fire("32");
+// model.fire("33");
+// model.fire("34");
+// model.fire("63");
+// model.fire("64");
+// model.fire("65");
+// model.fire("00");
 
 // view.displayMiss("00");
 // view.displayHit("34");
@@ -106,75 +156,4 @@ model.fire("00");
 // view.displayMessage("Tap tap, is this thing on?");
 
 });
-
-
-// $(function() {
-//   // ship1
-//   // var location1 = 3;
-//   // var location2 = 4;
-//   // var location3 = 5;
-
-//   // ship1: positioning ship1 randomly. Take the random location along with the next two consecutive
-//   var randomLoc = Math.floor(Math.random() * 5);
-//   var location1 = randomLoc;
-//   var location2 = location1 + 1;
-//   var location3 = location2 + 1;
-
-//   // user guesses
-//   var guess; 
-
-//   // number of hits
-//   var hits = 0;
-
-//   // number of guesses
-//   var guesses = 0;
-
-//   // keep track of whether the ship has sunk
-//   var isSunk = false;
-
-//   // loop whiles the ship is not sunk
-//   while (isSunk == false) {
-//     // get users guess
-//     guess = prompt("Ready, aim, fire! enter a number from 0 - 6:");
-//     // check the validity by making sure guess is between 0 and 6
-//     if (guess < 0 || guess > 6) {
-//       alert("Please enter a valid cell number");
-//     } 
-//     // keeping track count of guesses
-//     else {
-//       guesses = guesses + 1;
-//       // if guess matches one of the ship location we increment the ship count
-//       if (guess == location1 || guess == location2 || guess == location3) {
-//         alert("HIT!");
-//         hits = hits + 1;
-//         if (hits == 3) {
-//           isSunk = true;
-//           alert("You sunk my battleship!");
-//         }
-//       }
-//       else {
-//         alert("MISS!");
-//       }
-//     }
-//   }
-//   var stats = "You took " + guesses + " guesses to sink my battleship, " + "which means your shooting accuracy was " + (3/guesses);
-//   alert(stats);
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
