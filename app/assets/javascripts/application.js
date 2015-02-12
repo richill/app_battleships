@@ -84,7 +84,18 @@ $(function() {
   };
 
 
+model.fire("10");
+model.fire("20");
+model.fire("30");
 
+model.fire("32");
+model.fire("33");
+model.fire("34");
+
+model.fire("63");
+model.fire("64");
+model.fire("65");
+model.fire("00");
 
 // view.displayMiss("00");
 // view.displayHit("34");
