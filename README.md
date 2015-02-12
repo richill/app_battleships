@@ -1,3 +1,2 @@
-# Ruby on Rails Practise: Battleship Game
-
-This is the game application built on ruby on rails
+# app_battleships
+Game App | Try to locate/shoot the battleships - built with Javascript
