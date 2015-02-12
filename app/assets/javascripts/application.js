@@ -16,6 +16,87 @@
 //= require_tree .
 
 
+$(function() {
+  var view = {
+    displayMessage: function(msg) {
+      var messageArea = document.getElementById("messageArea");
+      messageArea.innerHTML = msg;
+    },
+    displayHit: function(location) {
+      var cell = document.getElementById(location);
+      cell.setAttribute("class","hit");
+    },
+    displayMiss: function(location) {
+      var cell = document.getElementById(location);
+      cell.setAttribute("class","miss");
+    }
+  };
+
+  // var ship1 = { locations: ["10", "20", "30"], hits: ["", "", ""] };
+  // var ship2 = { locations: ["32", "33", "34"], hits: ["", "", ""] };
+  // var ship3 = { locations: ["63", "64", "65"], hits: ["", "", ""] };
+
+  var model = {
+    boardSize: 7,
+    numShips: 3,
+    shipsSunk: 0,
+    shipLength: 3,
+
+    ships: [
+      // alphabet number: 10 = B0 | 20 = C0 | 30 = D0 [vertical / length: 3blocks]
+      { locations: ["10", "20", "30"], hits: ["", "", ""] },
+      // alphabet number: 32 = D2 | 33 = D3 | 34 = D4 [horizontal / length: 3blocks]
+      { locations: ["32", "33", "34"], hits: ["", "", ""] },
+      // alphabet number: 63 = G3 | 64 = G4 | 65 = G5 [horizontal / length: 3blocks]
+      { locations: ["63", "64", "65"], hits: ["", "", ""] }
+    ],
+
+    fire: function(guess) {
+      for (var i = 0; i < this.numShips; i++) {
+        // get the ship
+        var ship = this.ships[i];
+        // get the locations of the ship
+        // get the index of the guess in the location
+        var index = ship.locations.indexOf(guess);
+        if (index >= 0) {
+          ship.hits[index] = "hits";
+          view.displayHit(guess);
+          view.displayMessage("HIT!");
+          if (this.isSunk(ship)) {
+            view.displayMessage("You sunk my battleship!");
+            this.shipsSunk++;
+          }
+          return true;
+        }
+      }
+      view.displayMiss(guess);
+      view.displayMessage("You missed!");
+      return false;
+    },
+    isSunk: function(ship) {
+      for (var i = 0; i < this.numShips; i++) {
+        if (ship.hits[i] !== "hit") {
+          return false;
+        }
+      }
+      return true;
+    }
+  };
+
+
+
+
+// view.displayMiss("00");
+// view.displayHit("34");
+// view.displayMiss("55");
+// view.displayHit("12");
+// view.displayMiss("25");
+// view.displayHit("26");
+// view.displayMessage("Tap tap, is this thing on?");
+
+});
+
+
 // $(function() {
 //   // ship1
 //   // var location1 = 3;

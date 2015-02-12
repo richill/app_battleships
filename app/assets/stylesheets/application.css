@@ -14,8 +14,20 @@
  *= require_self
  */
 
+/*========================
+    general
+  ========================*/
+
 body {
-/*background-color: black;*/
+background-color: black;
+}
+
+.hit {
+  background: url("ship.png") no-repeat center center;
+}
+
+.miss {
+  background: url("miss.png") no-repeat center center;
 }
 
 /*========================
@@ -48,6 +60,7 @@ body {
   width: 94px;
   height: 94px;
   border: 1px solid green;
+  color: #fff;
 }
 
 #board td:hover {
@@ -68,6 +81,15 @@ body {
   font-size: 1em;
 }
 
+#board .lastrow td {
+  border: 1px solid black !important;
+  text-align: center !important;
+}
+
+#board .lastrow td:hover {
+  background-color: black !important;
+}
+
 
 
 /*========================
@@ -76,10 +98,10 @@ body {
 
 #gameBoard {
   position: relative;
-  width: 1300px;
+  width: 1333px;
   height: 863px;
   margin: auto;
-/*  background: url("board.jpg") no-repeat;*/
+  /*background: url("board.jpg") no-repeat;*/
 }
 
 #gameBoard #gameMessageArea {
@@ -94,12 +116,19 @@ body {
   left: 173px;
   top: 98px;
   border-spacing: 0px;
+  margin: 40px 0px;
+}
+
+tr {
+  color: red;
 }
 
 #gameBoard td {
-  width: 94px;
-  height: 94px;
+  width: 80px;
+  height: 80px;
   border: 1px solid green;
+  color: #fff;
+  text-align: center;
 }
 
 #gameBoard td:hover {
@@ -118,4 +147,13 @@ body {
   background-color: rgb(152, 207, 113);
   border-color: rgb(83, 175, 19);
   font-size: 1em;
+}
+
+#gameBoard .lastrow td {
+  border: 1px solid black !important;
+  text-align: center !important;
+}
+
+#gameBoard .lastrow td:hover {
+  background-color: black !important;
 }
