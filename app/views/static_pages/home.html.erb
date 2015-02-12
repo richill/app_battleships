@@ -1,8 +1,8 @@
-<!-- <h1>Play Battelship!</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p> -->
+<code><h1>Welcome to RICHILL's Battelship!</h1></code>
+<code><h3 classs="games"><%= link_to "Easy:Grid 7 game", root_path %> | <%= link_to "Advance:Grid 10 game", game_path %> | <%= link_to "About Richill", 'http://richill.github.io' %></h3><code>
 
 <div id="board">
-  <div id="messageArea"></div>
+  <code><div id="messageArea"></div></code>
   <table>
     <!-- row 1 -->
     <tr>
@@ -98,7 +98,7 @@
       <td id="66"></td>
     </tr>
     <!-- row 11 (not used) -->
-    <tr class="lastrow">
+  <!--   <tr class="lastrow">
       <td id="#">0</td>
       <td id="#">1</td>
       <td id="#">2</td>
@@ -106,10 +106,10 @@
       <td id="#">4</td>
       <td id="#">5</td>
       <td id="#">6</td>
-    </tr>
+    </tr> -->
   </table>
   <form>
-    <input type="text" id="guessInput" placeholder="A0">
+    <input type="text" id="guessInput" placeholder="letter must be in caps eg: A0">
     <input type="button" id="fireButton" value="Fire!">
   </form>
 </div>

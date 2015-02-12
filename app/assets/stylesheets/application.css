@@ -19,7 +19,15 @@
   ========================*/
 
 body {
-background-color: black;
+background-color: #ebf0ed;
+/*background-color: #93c8a0;*/
+}
+
+code h1 {
+  color: #2a2c32;
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .hit {
@@ -44,9 +52,17 @@ background-color: black;
 
 #board #messageArea {
   position: absolute;
-  top: 0px;
+  top: 18px;
   left: 0px;
   color: rgb(83, 175, 19);
+  width: 328px;
+  background-color: #2a2c32;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 0px #6c9375;
+  color: #fff;
+  height: 14px;
+  font-size: 18px;
 }
 
 #board table {
@@ -59,12 +75,12 @@ background-color: black;
 #board td {
   width: 94px;
   height: 94px;
-  border: 1px solid green;
+  border: 1px solid #c9c2b6;
   color: #fff;
 }
 
 #board td:hover {
-  background-color: red;
+  background-color: #93c8a0;
 }
 
 #board form {
@@ -72,13 +88,34 @@ background-color: black;
   top: 18px;
   right: 0px;
   padding: 15px;
-  background-color: rgb(83, 175, 19);
+  background-color: #93c8a0;
+  box-shadow: 0px 4px 0px #6c9375;
+  border-radius: 8px;
 }
 
-#board form input {
-  background-color: rgb(152, 207, 113);
-  border-color: rgb(83, 175, 19);
-  font-size: 1em;
+#board form #guessInput {
+  font-size: 12px;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #c9c2b6;
+  padding: 4px 25px;
+  width: 176px;
+}
+
+#board form #fireButton {
+  font-size: 12px;
+  outline: none;
+  background-color: #d66554;
+  border: 1px solid #d66554;
+  padding: 4px 25px;
+  width: 80px;
+  border-radius: 19px;
+  color: #fff;
+}
+
+#board form #fireButton:hover {
+  background-color: #2a2c32;
+  border: 1px solid #2a2c32;
 }
 
 #board .lastrow td {
@@ -90,6 +127,18 @@ background-color: black;
   background-color: black !important;
 }
 
+code h3 {
+  text-align: center;
+}
+
+code h3 a {
+  color: #2a2c32;
+}
+
+code h3 a:hover {
+  text-align: center;
+  color: #6c9375;
+}
 
 
 /*========================
