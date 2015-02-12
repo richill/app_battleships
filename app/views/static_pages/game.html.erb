@@ -2,7 +2,7 @@
 <code><h3 classs="games"><%= link_to "Easy:Grid 7 game", root_path %> | <%= link_to "Advance:Grid 10 game", game_path %> | <%= link_to "About Richill", 'http://richill.github.io' %></h3><code>
 
 <div id="gameBoard">
-  <div id="gameMessageArea"></div>
+  <code><div id="messageArea"></div></code>
   <table>
     <!-- row 1 -->
     <tr>
@@ -160,8 +160,8 @@
     </tr> -->
   </table>
   <form>
-    <input type="text" id="guessInput" placeholder="A0">
-    <input type="button" id="fireButton" value="GameFire!">
+    <input type="text" id="guessInput" placeholder="letter must be in caps eg: B0">
+    <input type="button" id="fireButton" value="Fire!">
   </form>
 </div>
 

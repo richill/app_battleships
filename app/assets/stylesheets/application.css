@@ -147,23 +147,31 @@ code h3 a:hover {
 
 #gameBoard {
   position: relative;
-  width: 1333px;
+  width: 1200px;
   height: 863px;
   margin: auto;
   /*background: url("board.jpg") no-repeat;*/
 }
 
-#gameBoard #gameMessageArea {
+#gameBoard #messageArea {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 18px;
+  left: 88px;
   color: rgb(83, 175, 19);
+  width: 328px;
+  background-color: #2a2c32;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 0px #477aa4;
+  color: #fff;
+  height: 14px;
+  font-size: 18px;
 }
 
 #gameBoard table {
   position: absolute;
   left: 173px;
-  top: 98px;
+  top: 58px;
   border-spacing: 0px;
   margin: 40px 0px;
 }
@@ -175,28 +183,57 @@ tr {
 #gameBoard td {
   width: 80px;
   height: 80px;
-  border: 1px solid green;
+  border: 1px solid #c9c2b6;
   color: #fff;
   text-align: center;
 }
 
 #gameBoard td:hover {
-  background-color: red;
+  background-color: #8db5d1;
 }
 
 #gameBoard form {
   position: absolute;
   top: 18px;
-  right: 0px;
+  right: 88px;
   padding: 15px;
-  background-color: rgb(83, 175, 19);
+  background-color: #8db5d1;
+  box-shadow: 0px 4px 0px #477aa4;
+  border-radius: 8px;
 }
 
-#gameBoard form input {
-  background-color: rgb(152, 207, 113);
-  border-color: rgb(83, 175, 19);
-  font-size: 1em;
+#gameBoard form #guessInput {
+  font-size: 12px;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #c9c2b6;
+  padding: 4px 25px;
+  width: 176px;
 }
+
+#gameBoard form #fireButton {
+  font-size: 12px;
+  outline: none;
+  background-color: #d66554;
+  border: 1px solid #d66554;
+  padding: 4px 10px;
+  width: 80px;
+  border-radius: 19px;
+  color: #fff;
+}
+
+#gameBoard form #fireButton:hover {
+  background-color: #2a2c32;
+  border: 1px solid #2a2c32;
+}
+
+
+
+
+
+
+
+
 
 #gameBoard .lastrow td {
   border: 1px solid black !important;
