@@ -76,7 +76,8 @@ code h1 {
   width: 94px;
   height: 94px;
   border: 1px solid #c9c2b6;
-  color: #fff;
+  color: #C4C5BD;
+  text-align: center;
 }
 
 #board td:hover {
@@ -184,7 +185,7 @@ tr {
   width: 80px;
   height: 80px;
   border: 1px solid #c9c2b6;
-  color: #fff;
+  color: #C4C5BD;
   text-align: center;
 }
 
