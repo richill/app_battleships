@@ -127,7 +127,7 @@ $(function() {
 
   function handleFireButton() {
     var guessInput = document.getElementById("guessInput");
-    var guessInput.value;
+    var guess = guessInput.value;
     controller.processGuess(guess);
     guessInput.value = "";
   }
