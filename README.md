@@ -1,2 +1,2 @@
 # app_battleships
-Game App | Try to locate/shoot the battleships - built with Javascript
+Game App | Locate the battleships - built with Javascript | Site: https://battlewarships.herokuapp.com
