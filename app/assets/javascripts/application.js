@@ -105,28 +105,37 @@ $(function() {
     return null;
   }
 
-  // var controller = {
-  //   guesses: 0,
+  var controller = {
+    guesses: 0,
 
-  //   processGuess: function(guess) {
-  //     var location = parseGuess(guess);
-  //     if (location) {
-  //       this.guesses++;
-  //       var hit = model.fire(location);
-  //       if (hit && model.shipsSunk === model.numShips) {
-  //           view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
-  //       }
-  //     }
-  //   }
-  // };
+    processGuess: function(guess) {
+      var location = parseGuess(guess);
+      if (location) {
+        this.guesses++;
+        var hit = model.fire(location);
+        if (hit && model.shipsSunk === model.numShips) {
+            view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+        }
+      }
+    }
+  };
 
-console.log(parseGuess("A0"));
-console.log(parseGuess("B6"));
-console.log(parseGuess("G3"));
-console.log(parseGuess("H0"));
-console.log(parseGuess("A7"));
+  function init() {
+    var fireButton = document.getElementById("fireButton");
+    fireButton.onclick = handleFireButton;
+  }
 
-// controller.processGuess("A0");
+  function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+    var guessInput.value;
+    controller.processGuess(guess);
+    guessInput.value = "";
+  }
+  window.onload = init;
+
+
+// controller.processGuess("A1");
+// controller.processGuess("B0");
 // controller.processGuess("C0");
 // controller.processGuess("D0");
 // controller.processGuess("D2");
@@ -135,6 +144,12 @@ console.log(parseGuess("A7"));
 // controller.processGuess("G3");
 // controller.processGuess("G4");
 // controller.processGuess("G5");
+
+// console.log(parseGuess("A0"));
+// console.log(parseGuess("B6"));
+// console.log(parseGuess("G3"));
+// console.log(parseGuess("H0"));
+// console.log(parseGuess("A7"));
 
 // model.fire("10");
 // model.fire("20");
