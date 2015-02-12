@@ -1,9 +1,12 @@
 <!-- <h1>Play Battelship!</h1>
 <p>Find me in app/views/static_pages/home.html.erb</p> -->
 
-<div id="board">
+<div id="gameBoard">
+  <div id="gameMessageArea"></div>
   <table>
+    <!-- row 1 -->
     <tr>
+      <td id="00"></td>
       <td id="01"></td>
       <td id="02"></td>
       <td id="03"></td>
@@ -13,8 +16,11 @@
       <td id="07"></td>
       <td id="08"></td>
       <td id="09"></td>
-      <td id="10"></td>
+    </tr>
 
+    <!-- row 2 -->
+    <tr>
+      <td id="10"></td>
       <td id="11"></td>
       <td id="12"></td>
       <td id="13"></td>
@@ -24,8 +30,11 @@
       <td id="17"></td>
       <td id="18"></td>
       <td id="19"></td>
-      <td id="20"></td>
+    </tr>
 
+    <!-- row 3 -->
+    <tr>
+      <td id="20"></td>
       <td id="21"></td>
       <td id="22"></td>
       <td id="23"></td>
@@ -35,8 +44,11 @@
       <td id="27"></td>
       <td id="28"></td>
       <td id="29"></td>
-      <td id="30"></td>
+    </tr>
 
+    <!-- row 4 -->
+    <tr>
+      <td id="30"></td>
       <td id="31"></td>
       <td id="32"></td>
       <td id="33"></td>
@@ -46,8 +58,11 @@
       <td id="37"></td>
       <td id="38"></td>
       <td id="39"></td>
-      <td id="40"></td>
+    </tr>
 
+    <!-- row 5 -->
+    <tr>
+      <td id="40"></td>
       <td id="41"></td>
       <td id="42"></td>
       <td id="43"></td>
@@ -57,8 +72,11 @@
       <td id="47"></td>
       <td id="48"></td>
       <td id="49"></td>
-      <td id="50"></td>
+    </tr>
 
+    <!-- row 6 -->
+    <tr>
+      <td id="50"></td>
       <td id="51"></td>
       <td id="52"></td>
       <td id="53"></td>
@@ -68,8 +86,11 @@
       <td id="57"></td>
       <td id="58"></td>
       <td id="59"></td>
-      <td id="60"></td>
+    </tr>
 
+    <!-- row 7 -->
+    <tr>
+      <td id="60"></td>
       <td id="71"></td>
       <td id="72"></td>
       <td id="73"></td>
@@ -79,8 +100,11 @@
       <td id="77"></td>
       <td id="78"></td>
       <td id="79"></td>
-      <td id="80"></td>
+    </tr>
 
+    <!-- row 8 -->
+    <tr>
+      <td id="80"></td>
       <td id="81"></td>
       <td id="82"></td>
       <td id="83"></td>
@@ -90,8 +114,11 @@
       <td id="87"></td>
       <td id="88"></td>
       <td id="89"></td>
-      <td id="90"></td>
+    </tr>
 
+    <!-- row 9 -->
+    <tr>
+      <td id="90"></td>
       <td id="91"></td>
       <td id="92"></td>
       <td id="93"></td>
@@ -101,10 +128,27 @@
       <td id="97"></td>
       <td id="98"></td>
       <td id="99"></td>
+    </tr>
+
+    <!-- row 10 -->
+    <tr>
       <td id="100"></td>
+      <td id="101"></td>
+      <td id="102"></td>
+      <td id="103"></td>
+      <td id="104"></td>
+      <td id="105"></td>
+      <td id="106"></td>
+      <td id="107"></td>
+      <td id="108"></td>
+      <td id="109"></td>
 
     </tr>
   </table>
+  <form>
+    <input type="text" id="gameGuessInput" placeholder="0A">
+    <input type="button" id="GameFireButton" value="GameFire!">
+  </form>
 </div>
 
 

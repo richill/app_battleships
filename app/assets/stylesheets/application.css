@@ -15,12 +15,107 @@
  */
 
 body {
-background-color: black;
+/*background-color: black;*/
 }
 
+/*========================
+    7grid board
+  ========================*/
+
 #board {
+  position: relative;
   width: 1024px;
   height: 863px;
   margin: auto;
-  background: url("board.jpg") no-repeat;
+/*  background: url("board.jpg") no-repeat;*/
+}
+
+#board #messageArea {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: rgb(83, 175, 19);
+}
+
+#board table {
+  position: absolute;
+  left: 173px;
+  top: 98px;
+  border-spacing: 0px;
+}
+
+#board td {
+  width: 94px;
+  height: 94px;
+  border: 1px solid green;
+}
+
+#board td:hover {
+  background-color: red;
+}
+
+#board form {
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  padding: 15px;
+  background-color: rgb(83, 175, 19);
+}
+
+#board form input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
+}
+
+
+
+/*========================
+    10grid board
+  ========================*/
+
+#gameBoard {
+  position: relative;
+  width: 1300px;
+  height: 863px;
+  margin: auto;
+/*  background: url("board.jpg") no-repeat;*/
+}
+
+#gameBoard #gameMessageArea {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: rgb(83, 175, 19);
+}
+
+#gameBoard table {
+  position: absolute;
+  left: 173px;
+  top: 98px;
+  border-spacing: 0px;
+}
+
+#gameBoard td {
+  width: 94px;
+  height: 94px;
+  border: 1px solid green;
+}
+
+#gameBoard td:hover {
+  background-color: red;
+}
+
+#gameBoard form {
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  padding: 15px;
+  background-color: rgb(83, 175, 19);
+}
+
+#gameBoard form input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
 }
